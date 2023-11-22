@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Get the button, form, and blog posts container
+    const addPostBtn = document.getElementById('addPostBtn');
+    const blogForm = document.getElementById('blogForm');
+    const blogPostsContainer = document.getElementById('blogPostsContainer');
+
+    // Function to create a new blog post
     function createBlogPost(title, date, content) {
         const post = document.createElement('article');
         post.classList.add('blog-post');
@@ -20,14 +26,19 @@ document.addEventListener('DOMContentLoaded', function () {
         blogPostsContainer.appendChild(post);
     }
 
-    const addPostBtn = document.getElementById('addPostBtn');
-    const blogPostsContainer = document.getElementById('blogPostsContainer');
+    // Event listener for the form submission
+    blogForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    addPostBtn.addEventListener('click', () => {
-        const postTitle = prompt('Enter the title for your blog post:');
+        // Get input values from the form
+        const postTitle = document.getElementById('postTitle').value;
+        const postContent = document.getElementById('postContent').value;
         const postDate = new Date().toLocaleDateString();
-        const postContent = prompt('Enter the content for your blog post:');
 
+        // Call the function to create the blog post
         createBlogPost(postTitle, postDate, postContent);
+
+        // Clear form fields
+        blogForm.reset();
     });
 });
