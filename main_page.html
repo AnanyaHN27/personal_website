@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <title>Your Name - Personal Website</title>
+</head>
+<body>
+
+<header class="classy-header">
+    <h1>Ananya</h1>
+    <p>Web Developer</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#blog">Blog</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Write a brief description about yourself here.</p>
+</section>
+
+<section id="portfolio">
+    <h2>Portfolio</h2>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: ananya.harinarain@gmail.com</p>
+</section>
+
+<section id="blog">
+    <h2>Blog</h2>
+
+    <form id="blogForm">
+        <label for="postTitle">Title:</label>
+        <input type="text" id="postTitle" name="postTitle" required>
+
+        <label for="postContent">Content:</label>
+        <textarea id="postContent" name="postContent" rows="4" required></textarea>
+
+        <button type="submit" id="addPostBtn">Add Blog Post</button>
+    </form>
+
+    <div id="blogPostsContainer"></div>
+</section>
+
+<!--<footer>-->
+<!--    <p>&copy; 2023 Ananya</p>-->
+<!--</footer>-->
+<script src="script.js"></script>
+
+</body>
+</html>
